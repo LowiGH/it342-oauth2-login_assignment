@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>OAuth2 Demo by Louie V. Bajamunde</title>
+</head>
+<body>
+<h2>OAuth2 Login Demo - Louie V. Bajamunde</h2>
+
+<div th:if="${name != null}">
+    <p>Welcome, <span th:text="${name}"></span>!</p>
+    <p>Testing testing . . . .</p>
+    <a href="/logout">Logout</a>
+</div>
+
+<div th:if="${name == null}">
+    <a href="/oauth2/authorization/google">Login with Google</a><br>
+    <a href="/oauth2/authorization/github">Login with GitHub</a>
+</div>
+
+</body>
+</html>
